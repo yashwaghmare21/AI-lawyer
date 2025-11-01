@@ -1,22 +1,47 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prasad Wakhre - AI Legal Counsel</title>
+    <title>AI Lawyer - Your Digital Legal Counsel</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'brand-primary': '#1a233f',
-              'brand-secondary': '#d4af37',
+              'brand-background': '#0a0a12',
+              'brand-gold': '#f0c24b',
+              'brand-cyan': '#00ffff',
               'brand-text': '#e0e0e0',
-              'brand-background': '#0d1117',
+              'brand-text-dark': '#1a233f',
             },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['"DM Serif Display"', 'serif'],
+            },
+            animation: {
+              'glow': 'glow 4s linear infinite',
+              'typing': 'typing 2s steps(30, end), blink-caret .75s step-end infinite',
+            },
+            keyframes: {
+              glow: {
+                '0%, 100%': { boxShadow: '0 0 5px #f0c24b, 0 0 10px #f0c24b' },
+                '50%': { boxShadow: '0 0 20px #f0c24b, 0 0 30px #f0c24b' },
+              },
+              typing: {
+                'from': { width: '0' },
+                'to': { width: '100%' }
+              },
+              'blink-caret': {
+                'from, to': { borderColor: 'transparent' },
+                '50%': { borderColor: '#f0c24b' },
+              }
+            }
           },
         },
       }
@@ -27,7 +52,12 @@
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "three": "https://aistudiocdn.com/three@^0.166.0",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^8.16.8",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^9.108.3",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.8",
+    "framer-motion-3d": "https://aistudiocdn.com/framer-motion-3d@^11.3.8"
   }
 }
 </script>
